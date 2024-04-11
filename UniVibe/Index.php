@@ -18,7 +18,7 @@
 <body class= "d-flex justify-content-center align-items-center vh-100">
     <!-- CORPO DO SITE -->
     <div class = "brLogin p-5 shadow rounded">
-        <form>
+        <form method = "post" action = "app/http/auten.php">
             <div class = "d-flex justify-content aling-items-center flex-column">
                 <h3 class = "display-4 fs-1 text-center">LOGIN</h3>
             </div>

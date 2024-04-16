@@ -24,19 +24,34 @@
                 <h3 class = "display-4 fs-1 text-center">CADASTRA-SE</h3>
             </div>
 
-            <?php if ( isset( $_GET['error'] ) ){ ?>
-            <div class = "alert alert-warning" role = "alert 
-                <?php echo htmlspecialchars($_GET['error']);?>">
-            </div>
-               <?php } ?>
+            <?php if ( isset ( $_GET['error'] ) ){ ?>
+
+                <div class = "alert alert-warning" role = "alert" >
+
+                    <?php echo htmlspecialchars($_GET['error']);?>"
+                </div>
+            <?php }
+
+                if (isset ( $_GET['nome'] ) ){
+
+                    $name = $_GET['nome'];
+                    
+                }else $nome = "";
+
+                if (isset ( $_GET['usuario'] ) ){
+
+                    $usuario = $_GET['usuario'];
+                    
+                }else $usuario = "";
+            ?>
                
             <div class = "mb-3">
                 <label class = "form-label">Nome</label>
-                <input type="text" name = "nome" class = "form-control">
+                <input type="text" name = "nome" value = "<?php $nome ?>" class = "form-control">
             </div>
             <div class = "mb-3">
                 <label class = "form-label">Nome do Usuario</label>
-                <input type="text" name = "usuario" class = "form-control">
+                <input type="text" name = "usuario" value = "<?php $usuario ?>" class = "form-control">
             </div>
             <div class = "mb-3">
                 <label for = "form-label">Senha</label>

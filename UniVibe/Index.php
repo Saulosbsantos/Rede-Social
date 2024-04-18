@@ -22,7 +22,13 @@
             <div class = "d-flex justify-content aling-items-center flex-column">
                 <h3 class = "display-4 fs-1 text-center">LOGIN</h3>
             </div>
+                <?php if ( isset ( $_GET['success'] ) ){ ?>
 
+                    <div class = "alert alert-success" role = "alert" >
+
+                        <?php echo htmlspecialchars($_GET['success']);?>"
+            </div>
+                <?php } ?>
             <div class = "mb-3">
                 <label class = "form-label">Nome do Usuario</label>
                 <input type="text" class = "form-control">

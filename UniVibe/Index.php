@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+
+    if ( isset ( $_SESSION['usuario']) ){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +28,18 @@
             <div class = "d-flex justify-content aling-items-center flex-column">
                 <h3 class = "display-4 fs-1 text-center">LOGIN</h3>
             </div>
-                <?php if ( isset ( $_GET['success'] ) ){ ?>
+                
+            
+            <?php if ( isset ( $_GET['error'] ) ){ ?>
+
+                <div class = "alert alert-warning" role = "alert" >
+
+                    <?php echo htmlspecialchars($_GET['error']);?>"
+                
+                </div>
+            <?php } ?>
+            
+            <?php if ( isset ( $_GET['success'] ) ){ ?>
 
                     <div class = "alert alert-success" role = "alert" >
 
@@ -31,11 +48,11 @@
                 <?php } ?>
             <div class = "mb-3">
                 <label class = "form-label">Nome do Usuario</label>
-                <input type="text" class = "form-control">
+                <input type="text" class = "form-control" name = "usuario">
             </div>
             <div class = "mb-3">
                 <label for = "form-label">Senha</label>
-                <input type = "password" class = "form-control">
+                <input type = "password" class = "form-control" name = "senha">
             </div>
             <button type = "submit" class = "btn btn-primary">Continuar</button>
             <a href = "cadastro.php">Cadastra-se</a>
@@ -44,3 +61,10 @@
     <!-- /CORPO DO SITE -->
 </body>
 </html>
+<?php
+    }else{
+
+        header("Location: home.php");
+        exit;
+    } 
+?>

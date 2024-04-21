@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+
+    if ( isset ( $_SESSION['usuario']) ){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +24,7 @@
 <body class= "d-flex justify-content-center align-items-center vh-100">
     <!-- CORPO DO SITE -->
     <div class = "brLogin p-5 shadow rounded">
-        <form method = "post" action = "app/http/cadas.php">
+        <form method = "post" action = "app/http/cadas.php" enctype ="multipart/form-data" >
             
             <div class = "d-flex justify-content aling-items-center flex-column">
                 <h3 class = "display-4 fs-1 text-center">CADASTRA-SE</h3>
@@ -58,7 +64,7 @@
                 <input type = "password" name = "senha" class = "form-control">
             </div>
             <div class = "mb-3">
-                <label class = "form-label">Imagem de perfil</label>
+                <label class = "form-label">Foto de perfil</label>
                 <input type="file" name = "imgp" class = "form-control">
             </div>
             <button type = "submit" class = "btn btn-primary">Inscrever-se</button>
@@ -68,3 +74,10 @@
     <!-- /CORPO DO SITE -->
 </body>
 </html>
+<?php
+    }else{
+
+        header("Location: home.php");
+        exit;
+    } 
+?>

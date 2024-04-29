@@ -1,5 +1,4 @@
 <?php
-
     session_start();
 
     if (!isset($_SESSION['usuario'])){
@@ -24,7 +23,7 @@
     <body class= "d-flex justify-content-center align-items-center vh-100">
         <!-- CORPO DO SITE -->
         <div class = "brLogin p-5 shadow rounded">
-            <form method = "post" action = "app/http/cadas.php" enctype ="multipart/form-data" >
+            <form method = "post" action = "cadas.php" enctype ="multipart/form-data" >
                 
                 <div class = "d-flex justify-content aling-items-center flex-column">
                     <h3 class = "display-4 fs-1 text-center">CADASTRA-SE</h3>
@@ -65,7 +64,7 @@
                 </div>
                 <div class = "mb-3">
                     <label class = "form-label">Foto de perfil</label>
-                    <input type="file" name = "imgp" class = "form-control">
+                    <input type="file"  class = "form-control" name = "pp">
                 </div>
                 <button type = "submit" class = "btn btn-primary">Inscrever-se</button>
                 <a href = "index.php">Cadastra-se</a>
@@ -76,8 +75,7 @@
 </html>
 <?php
     }else{
-
-        header("Location: home.php");
+        header("Location home.php");
         exit;
-    } 
+    }
 ?>

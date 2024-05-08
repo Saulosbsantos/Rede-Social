@@ -10,15 +10,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>UniVibe - Login</title>
 
-        <!-- CSS -->
-        <link rel = "stylesheet" href = "style.css">
-        <!-- /CSS -->
-
         <!-- BOOSTRAP -->
         <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
         <!-- /BOOSTRAP -->
-        <!-- ICONE -->
-        <!-- /ICONE -->
+        <!-- CSS -->
+        <link rel = "stylesheet" href = "/UNIVIBE/css/style.css">
+        <!-- /CSS -->
+
     </head>
     <body class= "d-flex justify-content-center align-items-center vh-100">
         <!-- CORPO DO SITE -->
